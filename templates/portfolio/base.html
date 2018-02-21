@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
     <link rel="stylesheet" href="{% static "css/Lightbox-Gallery.css" %}">
     <link rel="stylesheet" href="{% static "css/Navigation-Clean.css" %}">
+    <link rel="stylesheet" href="{% static "css/Paralax-Hero-Banner.css" %}">
     <link rel="stylesheet" href="{% static "css/styles.css" %}">
     <link rel="stylesheet" href="{% static "css/Team-Boxed.css" %}">
 </head>
@@ -23,23 +24,27 @@
     <div class="page"></div>
     <div>
         <nav class="navbar navbar-light navbar-expand-md navigation-clean">
-            <div class="container"><a class="navbar-brand" href="#">My awesome portfolio</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><a class="navbar-brand" href="{% url 'portfolio:home' %}">My awesome portfolio</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse"
                     id="navcol-1">
                     <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">About me</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Portfolio</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Blog</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Hire Me</a></li>
+                        <li class="nav-item" role="presentation"><a
+                                             class="nav-link" href="{% url 'portfolio:about' %}">About me</a></li>
+                        <li class="nav-item" role="presentation"><a
+                            class="nav-link" href="{% url 'portfolio:portfolio' %}">Portfolio</a></li>
+                        <li class="nav-item" role="presentation"><a
+                                             class="nav-link" href="{% url 'portfolio:blog' %}">Blog</a></li>
+                        <li class="nav-item" role="presentation"><a
+                                             class="nav-link" href="{% url 'portfolio:contact' %}">Hire Me</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-    </div>
-		{% block content %}
+    </div>		
+    {% block content %}
     {% endblock content %}
     <script src="{% static "js/jquery.min.js" %}"></script>
-    <script src="{% static "jbootstrap/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
 </body>
 {% endblock body %}

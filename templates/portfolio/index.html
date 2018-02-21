@@ -1,26 +1,21 @@
-{% extends "base.html" %}
+{% extends "portfolio/base.html" %}
+{%load static %}
 {% block title %}Yannick Le Roux - Homepage{% endblock title %}
     
 		{% block content %}
-    <div class="container home-title-container">
-        <h1 class="homepage-title">Welcome,</h1>
-        <h1 class="homepage-title">I am a Web Developper</h1>
-        <h1 class="homepage-title">from New York City</h1>
+   <div class="jumbotron hero-technology">
+        <div class="container home-title-container">
+            <h1 class="homepage-title">Welcome,</h1>
+            <h1 class="homepage-title">I am a Web Developper</h1>
+            <h1 class="homepage-title">from New York City</h1>
+        </div>
+        <p><a class="btn btn-primary btn-lg hero-button" role="button" href="#">Learn more</a></p>
     </div>
     <div class="container paragraph">
         <p>Je me presente, j'aime Python et Django. Website developpe sur Django etc ,Je me presente, j'aime Python et Django. Website developpe sur Django etc,&nbsp;Je me presente, j'aime Python et Django. Website developpe sur Django etc ,Je me presente,
             j'aime Python et Django. Website developpe sur Django etc ,Je me presente, j'aime Python et Django. Website developpe sur Django etc&nbsp;</p>
     </div>
-    <div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-3"></div>
-                <div class="col-md-3"></div>
-                <div class="col-md-3"></div>
-            </div>
-        </div>
-    </div>
+    <div></div>
     <div class="photo-gallery">
         <div class="container">
             <div class="intro">
@@ -41,7 +36,7 @@
                     data-lightbox="photos"><img class="img-fluid" src="{% static "img/desk.jpg" %}"></a></div>
             </div>
         </div>
-    </div>
+    </div>    
     <div class="contact-clean">
         <form method="post">
             <h2 class="text-center">Contact me</h2>
@@ -50,6 +45,5 @@
             <div class="form-group"><textarea class="form-control" rows="14" name="message" placeholder="Message"></textarea></div>
             <div class="form-group"><button class="btn btn-primary" type="submit">send </button></div>
         </form>
-    </div>
-		{% endblock content %}
+    </div>		{% endblock content %}
 
