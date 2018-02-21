@@ -1,4 +1,5 @@
-from django.core.mail import send_mail, BadHeaderError
+from django.core.mail import BadHeaderError, EmailMessage
+from django.template.loader import render_to_string
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from .forms import ContactForm
@@ -25,12 +26,21 @@ def emailView(request):
     else:
         form = ContactForm(request.POST)
         if form.is_valid():
+            to = ['yannick.leroux971@gmail.com']
+            subject = "I got a message from yannick-dev"
             name = form.cleaned_data['name']
             from_email = form.cleaned_data['from_email']
             message = form.cleaned_data['message']
             try:
-                send_mail(name, message, from_email,
-                        ['yannick.leroux971@gmail.com'])
+                context = {
+                        'name': name,
+                        'from_email': from_email,
+                        'message': message
+                        }
+                message = render_to_string('portfolio/email/email.txt',
+                        context)
+                EmailMessage(subject, message, to=to,
+                        from_email=from_email).send()
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('portfolio:success')
