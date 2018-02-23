@@ -19,18 +19,23 @@ class Portfolio(TemplateView):
     template_name = 'portfolio/portfolio.html'
 
     def get_context_data(self, **kwargs):
-        url = 'https://api.github.com/users/yannickleroux'
-        response = requests.get(url)
-        user = response.json()
+        try:
+            url = 'https://api.github.com/users/yannickleroux'
+            response = requests.get(url)
+            user = response.json()
 
-        url_repos = 'https://api.github.com/users/yannickleroux/repos'
-        response = requests.get(url_repos)
-        repos = response.json()
+            url_repos = 'https://api.github.com/users/yannickleroux/repos'
+            response = requests.get(url_repos)
+            repos = response.json()
 
-        context = super(Portfolio, self).get_context_data(**kwargs)
-        context['user'] = user
-        context['repos'] = repos
-        return context
+            context = super(Portfolio, self).get_context_data(**kwargs)
+            context['user'] = user
+            context['repos'] = repos
+            return context
+
+        except requests.exceptions.RequestException as e:
+            print (e) 
+
 
 
 

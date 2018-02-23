@@ -6,7 +6,12 @@
     <div class="intro">
 
     <h2 class="text-center">Open Source</h2>
+		{% if user %}
     <p> I currently have {{ user.public_repos }} public repositories on GitHub</p>
+		{% else %}
+		<p>Error: Can't access GitHub API</p>
+		{% endif %}
+
 		</div>
 </div>
 </div>
