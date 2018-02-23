@@ -1,41 +1,57 @@
 {% extends "portfolio/base.html" %}
 {% load static %}
 {% block content %}
+
+
+
+<div class="photo-gallery">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Projects</h2>
+                <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
+            </div>
+            <div class="row articles">
+                <div class="col-sm-6 col-md-4 item"><a href="#"><img
+                    class="img-fluid" src="{% static "img/desk.jpg" %}"></a>
+                    <h3 class="name">DJ-NewYork Agency</h3>
+                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
+                <div
+                    class="col-sm-6 col-md-4 item"><a href="#"><img
+                      class="img-fluid" src="{% static "img/building.jpg" %}"></a>
+                    <h3 class="name">Dj- Yanic Website</h3>
+                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
+            <div
+                class="col-sm-6 col-md-4 item"><a href="#"><img
+                  class="img-fluid" src="{% static "img/loft.jpg" %}"></a>
+                <h3 class="name">Raquel Le Roux</h3>
+                <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
+    </div>
+    </div>
+    </div>
+
+
 <div class="photo-gallery">
 <div class="container">
     <div class="intro">
 
-    <h2 class="text-center">Open Source</h2>
+    <h2 class="text-center">Open Source Projects</h2>
 		{% if user %}
-    <p> I currently have {{ user.public_repos }} public repositories on GitHub</p>
+    <p> I currently have {{ user.public_repos }} public repositories on
+    GitHub:</p>
 		{% else %}
 		<p>Error: Can't access GitHub API</p>
 		{% endif %}
+    <ul class="mt-5">
+    {% for repo in repos %}
+    <li class="my-3"><a href={{ repo.html_url  }}>{{ repo.name }}</a></br> 
+      {% if repo.description %}
+      <small>{{ repo.description }}</small>
+      {% endif %}
+      <hr> </li>
+    {% endfor %}
+    </ul>
 
 		</div>
 </div>
 </div>
-
- <div class="photo-gallery">
-        <div class="container">
-            <div class="intro">
-                <h2 class="text-center">Lightbox Gallery</h2>
-                <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
-            </div>
-            <div class="row photos">
-              <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static "img/desk.jpg" %}" data-lightbox="photos"><img class="img-fluid" src="{% static "img/desk.jpg" %}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a
-                    href="assets/img/building.jpg" data-lightbox="photos"><img class="img-fluid" src="{% static "img/building.jpg" %}" ></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a
-                    href="assets/img/loft.jpg" data-lightbox="photos"><img class="img-fluid" src="{% static "img/desk.jpg" %}" ></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a
-                    href="assets/img/building.jpg" data-lightbox="photos"><img class="img-fluid" src="{% static "img/building.jpg" %}" ></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="#"
-                    data-lightbox="photos"><img class="img-fluid" src="{% static "img/loft.jpg" %}" ></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="#"
-                    data-lightbox="photos"><img class="img-fluid" src="{% static "img/desk.jpg" %}"></a></div>
-            </div>
-        </div>
-    </div>    
-
 {% endblock %}
