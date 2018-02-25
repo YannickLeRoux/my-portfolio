@@ -1,4 +1,28 @@
 {% extends "portfolio/base.html" %}
 {% block content%}
-<h2>Blog under construction</h2>
+<!-- une icone carree bords arrondis avec ombre pour marquer chaque post -->
+<!-- a sa droite titre et date --> 
+<!-- reprendre couleur de fond de contact et faire des div blancs pour chaque post -->
+<!-- voir a utiliser react -->
+<div class="blog">
+<div class="container">
+  <div>
+  {% for post in my_posts %}
+  <div class="blog-post">
+    <h2>{{ post.title }}</h2>
+    <h6 style="float:right">Category: {{ post.category }}</h6>
+    <h6>{{ post.published_date|date:"M d, Y" }}</h6>
+    <div class="container">
+      <hr>
+      <p>{{ post.text }}</p>
+    </div>
+  </div>
+
+  {% empty %}
+  <h2>No Articles yet.</h2>
+  </div>
+</div>
+</div>
+
+{% endfor %}
 {% endblock %}

@@ -1,6 +1,6 @@
 {% extends "portfolio/base.html" %}
 {%load static %}
-{% block title %}Under Construction{% endblock title %}
+{% block title %}Yannick Le Roux - Home{% endblock title %}
     
 		{% block content %}
    <div class="jumbotron hero-technology">
@@ -9,7 +9,7 @@
             <h1 class="homepage-title">I am a Web Developper</h1>
             <h1 class="homepage-title">from New York City</h1>
         </div>
-        <p><a class="btn btn-primary btn-lg hero-button" role="button" href="#">Learn more</a></p>
+				<p><a class="btn btn-primary btn-lg hero-button" role="button" href="{% url 'portfolio:about' %}">Learn more</a></p>
     </div>
     <div class="container">
 			<p class="text-center">** Site Under Construction **</p>
