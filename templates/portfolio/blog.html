@@ -7,6 +7,7 @@
 <div class="blog">
 <div class="container">
   <div>
+	{% if my_posts %}
   {% for post in my_posts %}
   <div class="blog-post">
     <h2>{{ post.title }}</h2>
@@ -25,4 +26,5 @@
 </div>
 
 {% endfor %}
+{% endif %}
 {% endblock %}
