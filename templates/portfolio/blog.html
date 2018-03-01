@@ -4,7 +4,12 @@
 <!-- a sa droite titre et date --> 
 <!-- reprendre couleur de fond de contact et faire des div blancs pour chaque post -->
 <!-- voir a utiliser react -->
+
 <div class="blog">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'blog:blog' %}">My Blog</a></li>
+  <li class="breadcrumb-item active">Article 1</li>
+</ol>
 <div class="container">
   <div>
 	{% if my_posts %}
