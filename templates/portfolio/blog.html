@@ -1,4 +1,6 @@
 {% extends "portfolio/base.html" %}
+{% load markdownify %}
+
 {% block content%}
 <!-- une icone carree bords arrondis avec ombre pour marquer chaque post -->
 <!-- a sa droite titre et date --> 
@@ -20,7 +22,8 @@
     <h6>{{ post.published_date|date:"M d, Y" }}</h6>
     <div class="container">
       <hr>
-      <p>{{ post.get_message_as_markdown }}</p>
+
+      <div>{{ post.text|markdown|safe }}</div>
     </div>
   </div>
 
