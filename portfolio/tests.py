@@ -4,6 +4,7 @@ from django.test import TestCase
 from .views import Home
 
 class HomeTests(TestCase):
+
     def test_home_view_status_code(self):
         url = reverse('portfolio:home')
         response = self.client.get(url)
