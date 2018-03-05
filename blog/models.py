@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.utils.html import mark_safe
-from django.utils.text import Truncator, slugify
+from django.utils.text import slugify
 from markdown import markdown
 
 class Post(models.Model):
@@ -12,13 +12,6 @@ class Post(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
     slug = models.SlugField(max_length=20, unique=True, blank=True, null=True)
-
-    def __str__(self):
-        truncated_message = Truncator(self.text)
-        return truncated_message.chars(30)
-    
-    def get_message_as_markdown(self):
-        return mark_safe(markdown(self.text, safe_mode='escape'))
     
     def save(self, *args, **kwargs):
         if not self.id:
