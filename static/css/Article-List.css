@@ -67,7 +67,11 @@
   text-decoration:none;
 }
 
-.article-list .item .action:hover {
+.item .action:hover {
   opacity:1;
+}
+
+.item img:hover {
+  opacity:0.5;
 }
 

@@ -13,14 +13,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
     <link rel="stylesheet" href="{% static "css/Contact-Form-Clean.css" %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
-    <link rel="stylesheet" href="{% static "css/Lightbox-Gallery.css" %}">
     <link rel="stylesheet" href="{% static "css/Navigation-Clean.css" %}">
     <link rel="stylesheet" href="{% static "css/Paralax-Hero-Banner.css" %}">
     <link rel="stylesheet" href="{% static "css/vim.css" %}">
-    <link rel="stylesheet" href="{% static "css/Team-Boxed.css" %}">
     <link rel="stylesheet" href="{% static "css/Footer-Dark.css" %}">
+    <link rel="stylesheet" href="{% static "css/Lightbox-Gallery.css" %}">
     <link rel="stylesheet" href="{% static "fonts/font-awesome.min.css" %}"> 
-    <link rel="stylesheet" href="{% static "css/Article-List.css" %}"> 
+	  {% block addstyle %} {% endblock addstyle %}
     <link rel="stylesheet" href="{% static "css/styles.css" %}">
 </head>
 
@@ -29,7 +28,7 @@
     <div class="page"></div>
     <div>
         <nav class="navbar navbar-light navbar-expand-md navigation-clean">
-					<div class="container"><a class="navbar-brand" href="{% url 'portfolio:home' %}">Yannick Le Roux  <i class="fa fa-laptop"></i><small>    Developper in the making</small></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+					<div class="container"><a class="navbar-brand" href="{% url 'portfolio:home' %}">Yannick Le Roux  <i class="fa fa-laptop"></i><small>    Developer in the making</small></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse"
                     id="navcol-1">
                     <ul class="nav navbar-nav ml-auto">
