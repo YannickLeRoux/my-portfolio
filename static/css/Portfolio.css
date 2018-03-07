@@ -1,13 +1,13 @@
-.photo-gallery {
+.portfolio {
   color:#313437;
   background-color:#fff;
 }
 
-.photo-gallery p {
+.portfolio p {
   color:#7d8285;
 }
 
-.photo-gallery h2 {
+.portfolio h2 {
   font-weight:bold;
   margin-bottom:40px;
   padding-top:40px;
@@ -15,55 +15,55 @@
 }
 
 @media (max-width:767px) {
-  .photo-gallery h2 {
+  .portfolio h2 {
     margin-bottom:25px;
     padding-top:25px;
     font-size:24px;
   }
 }
 
-.photo-gallery .intro {
+.portfolio .intro {
   font-size:16px;
   max-width:500px;
   margin:0 auto 40px;
 }
 
-.photo-gallery .intro p {
+.portfolio .intro p {
   margin-bottom:0;
 }
 
-.photo-gallery .photos {
+.portfolio .photos {
   padding-bottom:20px;
 }
 
-.photo-gallery .item {
+.portfolio .item {
   padding-bottom:30px;
 }
 
-.photo-gallery .articles {
+.portfolio .articles {
   padding-bottom:40px;
 }
 
-.photo-gallery .item {
+.portfolio .item {
   padding-top:50px;
   min-height:425px;
   text-align:center;
 }
 
-.photo-gallery .item .name {
+.portfolio .item .name {
   font-weight:bold;
   font-size:16px;
   margin-top:20px;
   color:inherit;
 }
 
-.photo-gallery .item .description {
+.portfolio .item .description {
   font-size:14px;
   margin-top:15px;
   margin-bottom:0;
 }
 
-.photo-gallery .item .action {
+.portfolio .item .action {
   font-size:24px;
   width:24px;
   margin:22px auto 0;
