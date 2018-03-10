@@ -22,7 +22,7 @@
     <div class="container">
       <hr>
 
-      <div>{{ post.text|markdown|safe|truncatewords:30 }}</div>
+      <div>{{ post.text|markdown|safe|truncatewords:10 }}</div>
 			<a class="text-mute text-right" href="{% url 'blog:post' post.slug %}" >Read more...</a>
     </div>
   </div>
