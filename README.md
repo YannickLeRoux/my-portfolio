@@ -1,3 +1,4 @@
 # My Portfolio
 
-## Site under construction
+## Django 2.0
+## Bootstrap 4
