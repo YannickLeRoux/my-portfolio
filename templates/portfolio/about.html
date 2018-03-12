@@ -1,4 +1,5 @@
 {% extends "portfolio/base.html" %}
+{% load static %}
 {% block title %} Yannick Le Roux - About me {% endblock title %}
 {% block content %}
 <div class="container">
@@ -33,6 +34,16 @@
 		I enjoyed the course so much I became hooked on learning more about how to code.</p>
 
 
+		<div class="clock">
+      <div class="clock-face">
+        <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+      </div>
+    </div>
+<h4 class="text-center mb-5"><i class="fa fa-quote-left"></i> Time to get my first developer job! <i class="fa fa-quote-right"></i></h4>
+
+
 		<p>The first personal projects I undertook were driven by the idea of making my current job easier. <a href="https://github.com/YannickLeRoux/mp3_organizer" target="_blank">Organizing the music files</a> in
 		my laptop or <a href="https://github.com/YannickLeRoux/DMC_Chart_Parser" target="_blank">reading through tons of blog articles and charts</a> to collect good tracks to play, could be very boring and repetitive. These things, I felt, could definitely be helped by coding.</br></br>
 
@@ -53,3 +64,8 @@ My first project was to create a <a href="http://receipts-organizer.herokuapp.co
 </div>
 
 {% endblock %}
+
+{% block javascript %}
+ <script src="{% static "js/clock.js" %}"></script>
+{% endblock javascript %}
+
