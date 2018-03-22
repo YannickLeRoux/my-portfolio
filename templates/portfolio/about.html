@@ -1,6 +1,9 @@
 {% extends "portfolio/base.html" %}
 {% load static %}
 {% block title %} Yannick Le Roux - About me {% endblock title %}
+{% block addstyle %}
+<link rel="stylesheet" href="{% static "css/dropdown.css" %}">
+{% endblock addstyle %}
 {% block content %}
 <div class="container">
 	<div class="intro">
@@ -16,6 +19,20 @@
 <div class="container">
 	<div class="container my-5">
 		<div class="text-center"><a href="http://yannick-dev.com/static/files/Resume-v6.pdf" target="_blank" class="btn btn-primary btn-lg hero-button mb-4" id="download" >Download my Resume</a></div>
+
+		<div class="container">
+  <ul>
+     <li class="dropdown">
+      <a href="#" data-toggle="dropdown">See my Certifications <i class="icon-arrow"></i></a>
+      <ul class="dropdown-menu">
+        <li><a href="https://www.udemy.com/certificate/UC-5PRSEYVI/" target="_blank">Python and Django Full Stack Web Developer Bootcamp</a></li>
+        <li><a href="https://courses.edx.org/certificates/ee19337ad1df495cb24f91648532eac3" target="_blank">Programming for the Web with JavaScript - PENNx University</a></li>
+        <li><a href="https://www.udemy.com/certificate/UC-TVA9GJ4N/" target="_blank">REST APIs with Flask and Python</a></li>
+        <li><a href="https://courses.edx.org/certificates/094c7498fb13491b95ae05ff29ab9117" target="_blank">Introduction to Computer Science and Programming Using Python - MITx</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
 
 		<br/>
 		<p>After working for ten years as a sound engineer and DJ in the music industry, I felt a desire to switch career early 2017.</br>
@@ -64,5 +81,6 @@ My first project was to create a <a href="http://receipts-organizer.herokuapp.co
 
 {% block javascript %}
  <script src="{% static "js/clock.js" %}"></script>
+ <script src="{% static "js/dropdown.js" %}"></script>
 {% endblock javascript %}
 
