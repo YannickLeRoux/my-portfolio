@@ -1,10 +1,10 @@
 
 
-*, *:before, *:after {
-  -webkit-border-sizing: border-box;
-  -moz-border-sizing: border-box;
-  border-sizing: border-box;
-}
+/* *, *:before, *:after { */
+/*   -webkit-border-sizing: border-box; */
+/*   -moz-border-sizing: border-box; */
+/*   border-sizing: border-box; */
+/* } */
 
 
 .container > ul {
