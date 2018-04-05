@@ -131,4 +131,13 @@ blockquote p {
 	top:50%;
 }
 
+.make-space {
+	height: 70px;
+}
 
+/* @media (min-width:1000px) { */
+/* .make-space { */
+/* 	height: 100px; */
+/* } */
+ 
+/* } */

@@ -7,17 +7,22 @@
   padding-bottom:.75rem;
   color:#333;
   border-radius:0;
-  box-shadow:none;
+  box-shadow: none;
   border:none;
   margin-bottom:0;
   background-color:#158CB8;
+	z-index: 1234567;
 }
 
 @media (min-width:768px) {
   .navigation-clean {
     padding-top:1rem;
     padding-bottom:1rem;
+
   }
+  .make-space {
+		height: 100px;
+	}
 }
 
 .navigation-clean .navbar-brand {
