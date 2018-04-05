@@ -84,18 +84,7 @@ blockquote p {
   color: #2C363F;
 }
 
-@media (min-width:300px) {
-	.blog {
-		padding: 2px;
-	}
-	.blog-post {
-			padding: 15px;
-			margin: 20px 15px;
-	}
 
-
-
-}
 
 .clock {
 	width: 10rem;
@@ -131,13 +120,52 @@ blockquote p {
 	top:50%;
 }
 
-.make-space {
-	height: 70px;
-}
+/* .make-space { */
+/* 	height: 70px; */
+/* } */
 
 /* @media (min-width:1000px) { */
 /* .make-space { */
 /* 	height: 100px; */
 /* } */
+
+
  
-/* } */
+@media screen and (min-width:300px) {
+	.blog {
+		padding: 2px;
+	}
+	.blog-post {
+			padding: 15px;
+			margin: 20px 15px;
+	}
+	.make-space {
+		height:100px;
+	}
+
+}
+
+
+
+@media screen and (min-width:494px) {
+	.make-space {
+		height: 62px;
+	}
+
+}
+
+
+@media screen and (min-width:768px) {
+	.make-space {
+		height:100px;
+	}
+
+}
+
+@media screen and (min-width:992px) {
+	.make-space {
+		height:70px;
+	}
+
+}
+
