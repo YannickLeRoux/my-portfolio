@@ -1,5 +1,8 @@
 .navigation-clean {
   background:#fff;
+	position: fixed;
+	top: 0px;
+	width: 100%;
   padding-top:.75rem;
   padding-bottom:.75rem;
   color:#333;
