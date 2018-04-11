@@ -129,8 +129,19 @@ blockquote p {
 /* 	height: 100px; */
 /* } */
 
+.fa-laptop {
+	color:#292D32;
+	transition: all 0.7s ease-in-out;
 
- 
+}
+
+.laptop-hide {
+	transform: rotate(360deg) translate3D(100%, 150%, 0) scale(1.2) scale(0);
+
+}
+
+
+
 @media screen and (min-width:300px) {
 	.blog {
 		padding: 2px;
