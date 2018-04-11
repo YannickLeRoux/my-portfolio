@@ -11,7 +11,7 @@
                 <p class="text-center">Before learning to code, I used to create website using Wordpress. See some below.</p>
             </div>
             <div class="row articles">
-                <div class="col-sm-6 col-md-4 item"><a href="https://dj-newyork.com" target="_blank"><img
+                <div class="col-sm-6 col-md-4 item"><a href="http://dj-newyork.com" target="_blank"><img
                     class="img-fluid" src="{% static "img/djnewyork.jpg" %}"></a>
                     <h3 class="name">DJ-NewYork Agency</h3>
 										<p class="description">Made in 2017, this website allows the user to browse the talents of this agency and ask for their availability.</p></div>
@@ -63,7 +63,7 @@
     <ul class="mt-5">
 		{% if repos %}
     {% for repo in repos %}
-    <li class="my-3"><a href={{ repo.html_url  }}>{{ repo.name }}</a></br> 
+    <li class="my-3"><a href={{ repo.html_url  }}>{{ repo.name }}</a></br>
       {% if repo.description %}
       <small>{{ repo.description }}</small>
       {% endif %}
