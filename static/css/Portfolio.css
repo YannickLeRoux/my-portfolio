@@ -79,12 +79,49 @@
   opacity:1;
 }
 
+.image-portfolio {
+  position: relative;
+}
 .item img {
-	transition: all .2s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
-.item img:hover {
-  opacity:0.5;
-	transform: scale(1.1);
+.img-hover {
+  box-shadow: 4px 5px 5px rgb(43, 43, 43, 0.5);
+  background-color: rgba(33,140,182,0.3);
+  transform: scale(1.1);
+  filter: blur(.25px);
 }
 
+
+.overlay {
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(33,140,182,0.4);
+  transition: all .5s ease-in-out;
+}
+
+.overlay-hover {
+  visibility: visible;
+  transform: scale(1.1);
+  transition: all .5s ease-in-out;
+}
+
+.text-image-portfolio {
+  color: white;
+  font-size: 1em;
+  border: 1px solid white;
+  padding: 10px;
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  text-align: center;
+  background-color: transparent;
+  text-transform: uppercase;
+}

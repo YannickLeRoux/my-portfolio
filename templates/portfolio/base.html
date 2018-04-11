@@ -15,8 +15,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>{% block title %}Yannick Le Roux - Web & Software Development{% endblock title %}</title>
-    
-    <link rel="stylesheet"  href="{% static "bootstrap/css/bootstrap.min.css" %}">    
+
+    <link rel="stylesheet"  href="{% static "bootstrap/css/bootstrap.min.css" %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700i,800,900">
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="{% static "css/vim.css" %}">
     <link rel="stylesheet" href="{% static "css/Footer-Dark.css" %}">
     <link rel="stylesheet" href="{% static "css/Portfolio.css" %}">
-    <link rel="stylesheet" href="{% static "fonts/font-awesome.min.css" %}"> 
+    <link rel="stylesheet" href="{% static "fonts/font-awesome.min.css" %}">
 		<link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
 	  {% block addstyle %} {% endblock addstyle %}
     <link rel="stylesheet" href="{% static "css/styles.css" %}">
@@ -44,7 +44,7 @@
                 <div class="collapse navbar-collapse"
                     id="navcol-1">
                     <ul class="nav navbar-nav ml-auto">
-											
+
 									{% with url_name=request.resolver_match.url_name %}
                         <li class="nav-item" role="presentation"><a
                                              class="nav-link {% if url_name == 'about' %}active{% endif %}" href="{% url 'portfolio:about' %}">About me</a></li>
@@ -61,13 +61,14 @@
             </div>
         </nav>
 				<div class="make-space"></div>
-    </div>	
+    </div>
 		<div class="content">
     {% block content %}
-			
+
 		{% endblock content %}
 
     <script src="{% static "js/jquery.min.js" %}"></script>
+    <script src="{% static "js/myscript.js" %}"></script>
     <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
 		{% block javascript %}
