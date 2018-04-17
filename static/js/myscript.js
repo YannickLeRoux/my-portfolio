@@ -3,7 +3,9 @@ const images = document.querySelectorAll('.image-portfolio');
 const laptop = document.querySelector('#laptop-index');
 const jumbo = document.querySelector('.jumbotron');
 
-function debounce(func, wait = 20, immediate = true) {
+const navbar = document.querySelector('nav');
+
+function debounce(func, wait = 10, immediate = true) {
     var timeout;
     return function() {
       var context = this, args = arguments;
@@ -41,12 +43,14 @@ images.forEach(image => image.addEventListener('mouseover', handleImgOver));
 images.forEach(image => image.addEventListener('mouseleave', handleImgLeave));
 
 
-function handleShowLaptopIcon() {
-    const triggerScroll = (window.scrollY + window.innerHeight) - jumbo.offsetHeight;
-    if (triggerScroll > 290) {
-        laptop.classList.remove('laptop-hide');
+function handleScrollDown() {
+    if (window.scrollY > 120) {
+        navbar.style.setProperty('transform','translateY(-100%)');
+    } else {
+        navbar.style.setProperty('transform','translateY(0)');
     }
 }
 
 
-window.addEventListener('scroll', debounce(handleShowLaptopIcon));
+
+window.addEventListener('scroll', handleScrollDown);
