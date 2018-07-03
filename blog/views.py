@@ -1,6 +1,8 @@
 from django.utils import timezone
 from .models import Post
 from django.views.generic import ListView, DetailView
+from .serializers import PostSerializer
+from rest_framework import generics
 
 class Blog(ListView):
     model = Post
@@ -15,3 +17,7 @@ class PostDetail(DetailView):
     model = Post
     template_name = 'portfolio/post.html'
     slug_url_kwarg = 'slug'
+
+class PostList(generics.ListAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
