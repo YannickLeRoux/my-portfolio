@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import raven
 from decouple import config, Csv
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'widget_tweaks',
+    'raven.contrib.django.raven_compat',
     'portfolio',
     'blog',
     'rest_framework',
@@ -147,3 +149,10 @@ SECURE_BROWSER_XSS_FILTER = True
 # SESSION_COOKIE_SECURE = True
 # CSRF_COOKIE_SECURE = True
 X_FRAME_OPTIONS = 'DENY'
+
+RAVEN_CONFIG = {
+    'dsn': 'https://1cfa28080f594a408333b2ca0e41c2fa:78f4cd30ea5e4aa1b3c4583a183a674a@sentry.io/1278966',
+    # If you are using git, you can also automatically configure the
+    # release based on the git info.
+    #'release': raven.fetch_git_sha(os.path.abspath(os.pardir)),
+}
